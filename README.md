@@ -1,6 +1,5 @@
-# SQL-BOF
-A library of Beacon Object Files (BOFs) for interacting with Microsoft SQL Server (MSSQL) instances, patched for Brute Ratel only. This collection is templated off the TrustedSec [CS-Situational-Awareness-BOF](https://github.com/trustedsec/CS-Situational-Awareness-BOF) collection and models the functionality of the [SQLRecon](https://github.com/skahwah/SQLRecon) project.
-Some beacon object file for BRC4. Based on [SQL-BOF](https://github.com/Tw1sm/SQL-BOF).
+# MSSQL-BOF-BRC4
+A library of Beacon Object Files (BOFs) for interacting with Microsoft SQL Server (MSSQL) instances, patched for Brute Ratel only. This collection is templated off the TrustedSec [CS-Situational-Awareness-BOF](https://github.com/trustedsec/CS-Situational-Awareness-BOF) collection and models the functionality of the [SQLRecon](https://github.com/skahwah/SQLRecon) project. Based on [SQL-BOF](https://github.com/Tw1sm/SQL-BOF).
 
 ## Usage
 - coffexec /~/MSSQL-BOF-BRC4/SQL/xpcmd/xpcmd.x64.o "hostname && whoami"
@@ -8,12 +7,12 @@ Some beacon object file for BRC4. Based on [SQL-BOF](https://github.com/Tw1sm/SQ
 ## Available commands
 |Commands|Usage|Notes|
 |--------|-----|-----|
-|coffexec /~/MSSQL-BOF-BRC4/SQL/1434udp/1434udp.x64.o 127.0.0.1|[server IP] |Enumerate SQL Server connection info |
-|coffexec /~/MSSQL-BOF-BRC4/SQL/enableXpcmd/enableXpcmd.x64.o 1|[new Value for xp_cmdshell] |Change value of xp_cmdshell |
-|coffexec /~/MSSQL-BOF-BRC4/SQL/info/info.x64.o|Gather information about the SQL server |
-|coffexec /~/MSSQL-BOF-BRC4/SQL/query/query.x64.o "SELECT name,value FROM sys.configurations WHERE name = 'xp_cmdshell'"|[query]|Execute a custom SQL query |
-|coffexec /~/MSSQL-BOF-BRC4/SQL/whoami/whoami.x64.o |Gather logged in user, mapped user and roles |
-|coffexec /~/MSSQL-BOF-BRC4/SQL/xpcmd/xpcmd.x64.o "hostname && whoami" |[command]|Execute a system command via xp_cmdshell |
+|coffexec /~/MSSQL-BOF-BRC4/SQL/1434udp/1434udp.x64.o 127.0.0.1|[server IP] |Enumerate SQL Server connection info|
+|coffexec /~/MSSQL-BOF-BRC4/SQL/enableXpcmd/enableXpcmd.x64.o 1|[new Value for xp_cmdshell] |Change value of xp_cmdshell|
+|coffexec /~/MSSQL-BOF-BRC4/SQL/info/info.x64.o||Gather information about the SQL server|
+|coffexec /~/MSSQL-BOF-BRC4/SQL/query/query.x64.o "SELECT name,value FROM sys.configurations WHERE name = 'xp_cmdshell'"|[query]|Execute a custom SQL query|
+|coffexec /~/MSSQL-BOF-BRC4/SQL/whoami/whoami.x64.o||Gather logged in user, mapped user and roles|
+|coffexec /~/MSSQL-BOF-BRC4/SQL/xpcmd/xpcmd.x64.o "hostname && whoami"|[command]|Execute a system command via xp_cmdshell|
 
 ## References
 - [SQL-BOF](https://github.com/Tw1sm/SQL-BOF)
