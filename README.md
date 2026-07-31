@@ -1,5 +1,5 @@
 # SQL-BOF
-A library of beacon object files to interact with remote SQL servers and data. This collection is templated off the TrustedSec [CS-Situational-Awareness-BOF](https://github.com/trustedsec/CS-Situational-Awareness-BOF) collection and models the functionality of the [SQLRecon](https://github.com/skahwah/SQLRecon) project.
+A library of Beacon Object Files (BOFs) for interacting with Microsoft SQL Server (MSSQL) instances, patched for Brute Ratel only. This collection is templated off the TrustedSec [CS-Situational-Awareness-BOF](https://github.com/trustedsec/CS-Situational-Awareness-BOF) collection and models the functionality of the [SQLRecon](https://github.com/skahwah/SQLRecon) project.
 Some beacon object file for BRC4. Based on [SQL-BOF](https://github.com/Tw1sm/SQL-BOF).
 
 ## Usage
