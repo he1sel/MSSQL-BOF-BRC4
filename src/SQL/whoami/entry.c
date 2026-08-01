@@ -209,8 +209,10 @@ void coffee(char** argv, int argc, WCHAR** dispatch)
 	char* database;
 	char* link;
 	char* impersonate;
+	
+	if (argc < 1) { internal_printf("server required"); return; }
+	server = argv[0];
 
-	server = "localhost";
 	database = "master";
 	link = NULL;
 	impersonate = NULL;
