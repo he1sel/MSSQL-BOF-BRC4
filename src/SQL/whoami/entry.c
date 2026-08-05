@@ -212,9 +212,12 @@ void coffee(char** argv, int argc, WCHAR** dispatch)
 	
 	if (argc < 1) { internal_printf("server required"); return; }
 	server = argv[0];
+	link = NULL;
+	
+	if (argc == 2) { link = argv[1];}
 
 	database = "master";
-	link = NULL;
+	//link = NULL;
 	impersonate = NULL;
 
 /*

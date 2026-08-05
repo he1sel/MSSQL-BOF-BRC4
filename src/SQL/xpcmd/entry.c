@@ -164,12 +164,17 @@ void coffee(char** argv, int argc, WCHAR** dispatch)
 	char* impersonate;
 	char* command;
 
-	if (argc < 1) { internal_printf("command required"); return; }
+	if (argc < 2) { internal_printf("command and server required"); return; }
 	command = argv[0];
+	server = argv[1];
+	
+	link = NULL;
+	
+	if (argc == 3) { link = argv[2];}
 
-	server = *server == 0 ? "localhost" : server;
+	//server = *server == 0 ? "localhost" : server;
 	database = *database == 0 ? "master" : database;
-	link = *link  == 0 ? NULL : link;
+	//link = *link  == 0 ? NULL : link;
 	impersonate = *impersonate == 0 ?  NULL : impersonate;
 
 	if(!bofstart())
